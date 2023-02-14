@@ -9,6 +9,12 @@
     render();
   };
 
+  const removeTask = (taskIndex) => {
+    tasks.splice(taskIndex, 1);
+
+        render();
+  };
+
   const render = () => {
     let htmlString = "";
 
@@ -16,11 +22,20 @@
       htmlString += `
         <li>
           <span class="${task.done ? "tasks__content--done" : ""}">${task.content}</span>
+          <button class="js-remove">🗑</button>
         </li>
         `;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+
+    const removeButtons = document.querySelectorAll(".js-remove");
+
+    removeButtons.forEach((removeButton, index) => {
+      removeButton.addEventListener("click", () => {
+        removeTask(index);
+      });
+    });
   };
 
   const onFormSubmit = (event) => {
@@ -33,8 +48,6 @@
     }
 
     addNewTask(newTaskContent);
-
-
   };
 
   const init = () => {
