@@ -13,6 +13,7 @@
 .form__input {
     border: 2px solid #dfdfdf;
     padding: 10px;
+    font-weight: 400;
 }
 
 .form__button {
