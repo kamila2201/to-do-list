@@ -1,3 +1,8 @@
+.tasks {
+    border-bottom: 2px solid #dfdfdf;
+    padding-bottom: 10px;
+}
+
 .tasks__content--done {
     text-decoration: line-through;
 }
