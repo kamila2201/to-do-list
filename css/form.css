@@ -12,6 +12,7 @@
 
 .form__input {
     border: 2px solid #dfdfdf;
+    padding: 10px;
 }
 
 .form__button {
