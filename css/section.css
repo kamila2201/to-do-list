@@ -1,7 +1,5 @@
 .section {
-    background-color: #ffffff;
-    
-    
+    background-color: #ffffff;    
 }
 
 .section__header {
@@ -9,7 +7,6 @@
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 700;
-    
 }
 
 .section__body {
