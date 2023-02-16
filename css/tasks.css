@@ -14,17 +14,35 @@
 
 .tasks__button {
     border: none;
-    background-color: crimson;
     color: #ffffff;
     width: 30px;
     height: 30px;
     padding: 0;
 }
 
-.tasks__button--done {
-    background-color: #099709;
+.tasks__button--remove {
+    background-color: hsl(0, 100%, 50%);
 }
 
+.tasks__button--remove:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.tasks__button--remove:active {
+    background-color: hsl(348, 83%, 70%)
+}
+
+.tasks__button--done {
+    background-color: hsl(120, 89%, 30%);
+}
+
+.tasks__button--done:hover {
+    background-color: hsl(120, 89%, 40%);
+}
+
+.tasks__button--done:active {
+    background-color: hsl(120, 89%, 50%);
+}
 
 
 .tasks__content--done {
