@@ -19,6 +19,14 @@
 .form__button {
     padding: 10px;
     border: none;
-    background-color: #008080;
+    background-color: hsl(180, 100%, 25%);
     color: #ffffff;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
 }
