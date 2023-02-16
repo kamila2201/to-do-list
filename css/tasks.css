@@ -19,18 +19,13 @@
     width: 30px;
     height: 30px;
     padding: 0;
-
-
 }
 
 .tasks__button--done {
     background-color: #099709;
-    
-
-
 }
 
-.tasks__content {}
+
 
 .tasks__content--done {
     text-decoration: line-through;
