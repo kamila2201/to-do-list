@@ -2,4 +2,5 @@
    max-width: 800px;
    padding: 20px;
    margin: 0 auto;
+   word-break: break-word;
 }
