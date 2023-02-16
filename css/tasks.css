@@ -1,7 +1,36 @@
 .tasks {
     border-bottom: 2px solid #dfdfdf;
-    padding-bottom: 10px;
+    padding: 0 10px 10px;
 }
+
+.tasks__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: 10px;
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.tasks__button {
+    border: none;
+    background-color: crimson;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+
+}
+
+.tasks__button--done {
+    background-color: #099709;
+    
+
+
+}
+
+.tasks__content {}
 
 .tasks__content--done {
     text-decoration: line-through;
