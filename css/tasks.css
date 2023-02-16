@@ -1,5 +1,4 @@
 .tasks {
-    border-bottom: 2px solid #dfdfdf;
     padding: 0 10px 10px;
 }
 
@@ -10,6 +9,8 @@
     grid-gap: 10px;
     list-style: none;
     margin: 10px 0px;
+    padding-bottom:10px;
+    border-bottom: 2px solid #dfdfdf;
 }
 
 .tasks__button {
