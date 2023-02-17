@@ -21,6 +21,7 @@
     border: none;
     background-color: hsl(180, 100%, 25%);
     color: #ffffff;
+    cursor: pointer;
 }
 
 .form__button:hover {
