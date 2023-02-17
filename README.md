@@ -12,3 +12,4 @@ This website is very useful when you want to create to-do list. You can add task
 - ES6+ features
 ## Check it out!
 https://kamila2201.github.io/to-do-list/
+![to-do list website animation gif](images/animation.gif)
