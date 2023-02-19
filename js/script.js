@@ -20,7 +20,7 @@
     render();
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
@@ -34,7 +34,9 @@
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+  }
 
+  const bindButtonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -50,6 +52,12 @@
         toggleTaskDone(index);
       });
     });
+  };
+
+  const render = () => {
+    renderTasks();
+
+    bindButtonsEvents();
 
   };
 
@@ -58,7 +66,7 @@
 
     const newTaskElement = document.querySelector(".js-newTask")
     const newTaskContent = newTaskElement.value.trim();
-    
+
     if (newTaskContent != "") {
       addNewTask(newTaskContent);
       newTaskElement.value = "";
