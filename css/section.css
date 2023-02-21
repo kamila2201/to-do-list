@@ -6,10 +6,13 @@
 }
 
 .section__header {
-    border-bottom: 2px solid #dfdfdf;
     padding: 20px 20px;
     font-size: 20px;
     font-weight: 700;
+}
+
+.section__header--addTask {
+    border-bottom: 2px solid #dfdfdf;
 }
 
 .section__body {
@@ -18,11 +21,40 @@
 
 .section__button {
     border: none;
-    color:teal;
+    color: hsl(180, 100%, 25%);
     background-color: #ffffff;
-    transition: 1s,
+    margin:10px;
+    transition: 1s;
+    cursor: pointer;
 }
 
 .section__button:hover {
     color: hsl(180, 100%, 30%);
+}
+
+.section__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    padding: 5px;
+    align-items: center;
+    border-bottom: 2px solid #dfdfdf;
+    margin: 20px 0;
+}
+
+@media (max-width: 767px){
+    .section__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__hidden {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 767px){
+    .section__hidden {
+        grid-template-columns: 1fr;
+    }
 }
