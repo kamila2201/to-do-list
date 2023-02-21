@@ -59,12 +59,32 @@
     });
   };
 
+ const bindButtonsEvents = () => {};
+
+ const renderButtons = (hideDoneTask) => {
+  let htmlButtonString = "";
+
+  if (tasks.length > 0) {
+    htmlButtonString = `
+          <button class="section__button js-buttons">
+              ${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone
+          </button>
+          <button class="section__button js-doneAllTask" ${tasks.every(task => task.done) ? "disabled" : ""}>
+              Ukończ wszystkie
+          </button>
+      `;
+  };
+
+  document.querySelector(".js-buttons").innerHTML = htmlButtonString;
+};
 
   const render = () => {
     renderTasks();
+    renderButtons();
 
     bindRemoveEvents();
     bindToggleDoneEvents();
+    bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {
@@ -80,8 +100,6 @@
 
     newTaskElement.focus();
   };
-
-
 
   const init = () => {
     render();
