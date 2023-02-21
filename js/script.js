@@ -1,5 +1,6 @@
 {
   let tasks = [];
+  let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
     tasks = [
@@ -38,15 +39,17 @@
     document.querySelector(".js-tasks").innerHTML = htmlString;
   }
 
-  const bindButtonsEvents = () => {
+  const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
       removeButton.addEventListener("click", () => {
         removeTask(index);
       });
-    });
+    })
+  };
 
+  const bindToggleDoneEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -56,10 +59,12 @@
     });
   };
 
+
   const render = () => {
     renderTasks();
 
-    bindButtonsEvents();
+    bindRemoveEvents();
+    bindToggleDoneEvents();
   };
 
   const onFormSubmit = (event) => {
