@@ -15,3 +15,14 @@
 .section__body {
     padding: 0 20px 20px;
 }
+
+.section__button {
+    border: none;
+    color:teal;
+    background-color: #ffffff;
+    transition: 1s,
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 30%);
+}
