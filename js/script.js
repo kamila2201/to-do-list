@@ -2,6 +2,7 @@
   let tasks = [];
   let hideDoneTasks = false;
 
+
   const addNewTask = (newTaskContent) => {
     tasks = [
       ...tasks,
@@ -22,6 +23,7 @@
     tasks = tasks.map((task, index) => index === taskIndex ? { ...task, done: !task.done } : task);
     render();
   };
+
 
   const renderTasks = () => {
     let htmlString = "";
@@ -59,24 +61,41 @@
     });
   };
 
- const bindButtonsEvents = () => {};
+  const bindButtonsEvents = () => {
+    if (tasks.length > 0) {
+      const allTasksDoneButton = document.querySelector(".js-allTasksDone");
+      const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
 
- const renderButtons = (hideDoneTask) => {
-  let htmlButtonString = "";
+      allTasksDoneButton.addEventListener("click", () => {
+        tasks = tasks.map(task => { return { ...task, done: true } });
+        render();
+      });
 
-  if (tasks.length > 0) {
-    htmlButtonString = `
-          <button class="section__button js-buttons">
-              ${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone
+      hideDoneTasksButton.addEventListener("click", () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+      });
+
+
+    };
+  };
+
+  const renderButtons = () => {
+    let htmlButtonString = "";
+
+    if (tasks.length > 0) {
+      htmlButtonString = `
+          <button class="section__button js-hideDoneTasks">
+              ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
           </button>
-          <button class="section__button js-doneAllTask" ${tasks.every(task => task.done) ? "disabled" : ""}>
+          <button class="section__button js-allTasksDone" ${tasks.every(task => task.done) ? "disabled" : ""}>
               Ukończ wszystkie
           </button>
       `;
-  };
+    };
 
-  document.querySelector(".js-buttons").innerHTML = htmlButtonString;
-};
+    document.querySelector(".js-buttons").innerHTML = htmlButtonString;
+  };
 
   const render = () => {
     renderTasks();
