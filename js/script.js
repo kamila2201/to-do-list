@@ -30,13 +30,14 @@
 
     for (const task of tasks) {
       htmlString += `
-        <li class="tasks__item">
+        <li class="tasks__item ${task.done && hideDoneTasks ? "tasks__item--hidden" : ""}">
           <button class="tasks__button tasks__button--done js-toggleDone">${task.done ? "✔" : ""}</button>
           <span class="tasks__content ${task.done ? "tasks__content--done" : ""}">${task.content}</span>
           <button class="tasks__button tasks__button--remove js-remove">🗑</button>
         </li>
         `;
     }
+    
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
   }
@@ -75,12 +76,10 @@
         hideDoneTasks = !hideDoneTasks;
         render();
       });
-
-
     };
   };
 
-  const renderButtons = () => {
+  const renderButtons = (hideDoneTask) => {
     let htmlButtonString = "";
 
     if (tasks.length > 0) {

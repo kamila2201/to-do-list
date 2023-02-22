@@ -7,10 +7,15 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     grid-gap: 10px;
+    word-break: break-word;;
     list-style: none;
     margin: 10px 0px;
     padding: 10px;
     border-bottom: 2px solid #dfdfdf;
+}
+
+.tasks__item--hidden {
+    display: none;
 }
 
 .tasks__button {
