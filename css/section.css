@@ -23,13 +23,17 @@
     border: none;
     color: hsl(180, 100%, 25%);
     background-color: #ffffff;
-    margin:10px;
+    margin: 10px;
     transition: 1s;
     cursor: pointer;
 }
 
 .section__button:hover {
     color: hsl(180, 100%, 30%);
+}
+
+.section__button:disabled {
+    color: rgb(189, 184, 184);
 }
 
 .section__container {
@@ -42,7 +46,7 @@
     margin: 20px 0;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .section__container {
         grid-template-columns: 1fr;
     }
@@ -53,7 +57,7 @@
     grid-template-columns: 1fr 1fr;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .section__hidden {
         grid-template-columns: 1fr;
     }
