@@ -26,12 +26,12 @@
     color: hsl(180, 100%, 25%);
     background-color: #ffffff;
     margin: 10px;
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 .section__button:hover {
-    color: hsl(180, 100%, 30%);
+    color: hsl(180, 100%, 35%);
 }
 
 .section__button:disabled {
