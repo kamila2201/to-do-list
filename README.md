@@ -9,6 +9,7 @@ This website is very useful when you want to create to-do list. You can add task
 - JavaScript
 - BEM
 - Grid
+- Flex
 - ES6+ features
 ## Check it out!
 https://kamila2201.github.io/to-do-list/
