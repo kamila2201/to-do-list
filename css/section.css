@@ -24,7 +24,7 @@
 .section__button {
     border: none;
     color: hsl(180, 100%, 25%);
-    background-color: #ffffff;
+    background-color: transparent;
     margin: 10px;
     transition: 0.5s;
     cursor: pointer;
