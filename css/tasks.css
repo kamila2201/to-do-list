@@ -26,6 +26,7 @@
     height: 30px;
     padding: 0;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .tasks__button--remove {
